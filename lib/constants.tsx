@@ -40,13 +40,13 @@ export const prompts: Prompt[] = [
     label: "Default (Prompt)",
     content: `Here is the prompt (you can replace the default in the extension tab):
 
-"Your output should use the following template:
+"Your output should be in Portuguese and use the following template:
 
-## Summary
+## Resumo
 
-## Analogy
+## Analogia
 
-## Notes
+## Notas
 
 - [Emoji] Bulletpoint
 
@@ -70,8 +70,34 @@ Please ensure that the summary, bullet points, and explanations fit within the 3
   },
   {
     value: "prompt-one",
-    label: "Prompt Two",
-    content: "Give me a summary of this video"
+    label: "Resposta curta",
+    content: "Give me a short summary of this video in Portuguese. Fit within the 50 word limit."
+  },
+  {
+    value: "prompt-two",
+    label: "Flashcard",
+    content: `Here is the prompt (you can replace the default in the extension tab):
+
+"               #Você é um assistende de criação de flashcards. 
+                
+                #Diretrizes:
+                Relevância: Foque apenas nas informações mais importantes e relevantes.
+                Clareza: As perguntas devem ser claras e de fácil compreensão.
+                Concisão: As respostas devem ser extremamente concisas, abordando apenas um conceito ou fato.
+                Idioma: Todo o conteúdo deve ser produzido em Português Brasileiro.
+                Originalidade: Não repita flashcards semelhantes ou idênticos.
+
+               #Formato: Siga o formato de resposta. Não use {} na resposta.
+               {frente do cartão};{verso do cartão}                
+
+               #Exemplo de resultados: (não exiba {}):
+
+                "Onde está localizada o Mar Morto?"; “na fronteira entre Israel e Jordânia”
+
+                "Qual é o ponto mais baixo da superfície da Terra?"; “a linha costeira do Mar Morto”
+
+              # Solicitação: Crie 50 flashcards para o Anki.                
+"`        
   }
 ]
 
